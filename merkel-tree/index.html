@@ -38,7 +38,8 @@
 
     <body class="hack dark main container">
         
-            
+    
+        
                 
                     <header>
                         <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
@@ -65,54 +66,12 @@
                     </header>
                 
             
+    
 
-            <main>
-                
-                    <header>
-                        <h1>z-log</h1>
-                    </header>
-                
-                
-                    
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://kkroy22.github.io/zlog/elliptic-curves/">Elliptic Curves</a>
-            </h2>
-            <span class="muted">
-    <svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32"
-         width="16" height="16" fill="none" stroke="currentcolor"
-         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-        <circle cx="16" cy="16" r="14"/>
-        <path d="M16 8 L16 16 20 20"/>
-    </svg>
-    <span>1 minute read</span>
-    <svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32"
-         width="16" height="16" fill="none" stroke="currentcolor"
-         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-        <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
-    </svg>
-
-    Published: 2022-04-15
-</span>
-        </header>
-        
-            <div itemprop="summary">
-                <p>Ellyptic curve on arbitery field. </p>
-
-                <nav class="readmore"><a itemprop="url" href="https://kkroy22.github.io/zlog/elliptic-curves/">Read More&nbsp;&raquo;</a></nav>
-            </div>
-        
-    </article>
-
-                
-                    
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://kkroy22.github.io/zlog/merkel-tree/">Merkel Tree</a>
-            </h2>
-            <span class="muted">
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 itemprop="headline">Merkel Tree</h1>
+        <span class="muted">
     <svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32"
          width="16" height="16" fill="none" stroke="currentcolor"
          stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
@@ -128,27 +87,60 @@
 
     Published: 2022-04-15
 </span>
-        </header>
-        
-            <div itemprop="summary">
-                <p>Merkle Trees are used in popular software applications like Git, Amazon Dynamo DB and BlockChain. A merkle tree is a metadata-structure, which stores the hash of the combined children in each parent. Any change in a child requires a change in the parent node. </p>
+    </header>
+    <div itemprop="articleBody">
+      <p>Merkle Trees are used in popular software applications like Git, Amazon Dynamo DB and BlockChain. A merkle tree is a metadata-structure, which stores the hash of the combined children in each parent. Any change in a child requires a change in the parent node. </p>
+<span id="continue-reading"></span>
+<p>This property of identifying state changes is useful when validating the correctness of data, as calculating the inverse of a hash is computationally infeasible. The merkle tree's properties are suitable for applications where a malicious user must be stopped from changing data.</p>
+<p>Git file creation details:
+Git registers any change in a file as an entirely new file. It stores the content of the file with a filename of SHA1(fileContents). Let's say this SHA1(fileContents) = x. If x already exists in the git file system, it doesn't go ahead and create it. This avoids unnecessary recreations when metadata about a file is changed.</p>
+<p>When a file is modified in Git, git creates a new (changed)file, and all it's changed parents. The root subsequently changes. It's like a branch of a Persistent Data Structure. If you want to go back a commit, you use the root of the previous commit, which still points to the old file. </p>
+<p>In this way, Git takes snapshots of every point of change in the project. Perfect for a version control system.</p>
+<p>It is also useful to find the points at which the data has changed, using a Merkle Tree. Amazon Dynamo DB uses merkle trees to reduce entropy (Anti-entropy technique) when a new node is added to the Dynamo DB cluster.</p>
+<p>Amazon Dynamo DB data migration details:
+When copying a range assigned to a node, we have to allow concurrent updates to keep the service available. But when the migration is in progress, concurrent updates lead to stale data in the destination node.</p>
+<p>So we copy the data range multiple times. When there is no change in the two nodes, we declare the destination node as consistent. Since we want this to happen as fast as possible, we try to minimise the number of copy iterations. The procedure is explained in the video.</p>
 
-                <nav class="readmore"><a itemprop="url" href="https://kkroy22.github.io/zlog/merkel-tree/">Read More&nbsp;&raquo;</a></nav>
-            </div>
-        
-    </article>
+    </div>
 
+    
+        <footer>
+            <hr>
+            <p>
                 
+                    Published by Kiran Kumar Roy
+                
+                
+                    
+                    in <a href="https://kkroy22.github.io/zlog/categories/data-structure/">Data Structure</a>
+                
+                
+                    and
+                    tagged
+                    
+                        <a href="https://kkroy22.github.io/zlog/tags/rust/">rust</a>
+                        
+                            
+                                
+                                    and
+                                
+                            
+                        
+                    
+                        <a href="https://kkroy22.github.io/zlog/tags/tree/">tree</a>
+                        
+                            
+                        
+                    
+                
+            </p>
+            
+            
+        </footer>
+    
+</article>
 
-                <nav>
-                  <p>
-                    
-                    <span>Page 1 of 1</span>
-                    
-                  </p>
-                </nav>
-            </main>
-        
+
     </body>
 
 </html>

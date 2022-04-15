@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-	<title>log::debug! - rust</title>
-	<link href="https://kkroy22.github.io/zlog/tags/rust/atom.xml" rel="self" type="application/atom+xml"/>
+	<title>log::debug! - Data Structure</title>
+	<link href="https://kkroy22.github.io/zlog/categories/data-structure/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://kkroy22.github.io/zlog"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
 	<updated>2022-04-15T00:00:00+00:00</updated>
-	<id>https://kkroy22.github.io/zlog/tags/rust/atom.xml</id>
+	<id>https://kkroy22.github.io/zlog/categories/data-structure/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Merkel Tree</title>
 		<published>2022-04-15T00:00:00+00:00</published>
